@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Syne", sans-serif;
+  background-color: black;
+  color: #ffffff;
+}
+
+.title {
+  display: flex;
+  margin: 0 60px;
+  align-items: center;
+}
+
+.vertical-line {
+  display: inline-block;
+  border-left: 2px solid #ffffff;
+  height: 120px;
+  margin: 0 20px;
+}
+
+.vertical-line2 {
+  display: inline-block;
+  border-left: 2px solid #ffffff;
+  height: 80px;
+  margin: 0 20px;
+  margin-top: 30px;
+}
+
+.rights {
+  margin: 0 60px;
+}
+
+.rights p {
+  transform: rotate(-90deg);
+  position: absolute;
+  margin-top: 40px;
+  margin-left: -10px;
+}
+
+nav {
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 120px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 15px;
+  color: white;
+}
+
+.nav-links a:hover{
+    transform: scale(1.05);
+}
+
+.lt-sign,
+.gt-sign {
+  color: green;
+}
+
+.web-links {
+  margin: 0 60px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+.web-links img {
+  border-radius: 50%;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.wrapper {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 100px;
+  margin-top: -400px;
+}
+
+.header img {
+  border-radius: 10px;
+}
+
+.header-info {
+  margin: 70px;
+}
+
+.header-info h1 {
+  color: green;
+}
+
+
+main h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.goals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin: 20px auto;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+}
+
+.goals-list {
+  width: 100%;
+  border: 3px #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  background-color: #292e35;
+  color: green;
+  padding: 20px;
+}
+
+.goals-list:hover {
+  transform: scale(1.05);
+  color: #98ff98;
+}
+
+.goals-list h3 {
+  position: relative;
+}
+
+.goals-list h3::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  margin-top: 10px;
+  margin-left: calc(50% - 75px);
+  background-color: #98ff98;
+  position: absolute;
+}
+
+.goals-list p {
+  padding: 10px;
+}
+
+.horizontal-line {
+  border-top: 0.5px solid white;
+  margin: 60px 0;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.contact {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.phone,
+.mail {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.phone p,
+.mail p {
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .goals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    height: max-content;
+    width: max-co;
+    font-size: 14px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .web-links {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 50px;
+  }
+
+  .web-links a{
+    padding: 5px;
+    
+  }
+
+  .rights {
+    display: none;
+  }
+
+  .vertical-line2{
+    display: none;
+  }
+
+  .header {
+    padding-top: 19rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-info {
+    margin: 20px;
+  }
+
+  main h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .goals {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 90%;
+  }
+
+  .goals-list {
+    padding: 10px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .phone,
+  .mail {
+    margin: 10px 0;
+  }
+}
